@@ -1,0 +1,334 @@
+.b2b-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.section-title{
+  font-size:16px;
+  letter-spacing:.20em;
+  text-transform:uppercase;
+  margin: 18px 0 10px;
+  color: rgba(191,255,230,.88);
+}
+.link-card{
+  display:block;
+  text-decoration:none;
+  color: inherit;
+}
+.link-card .card-title{
+  font-size:13px;
+}
+.link-card .card-sub{
+  margin-top:6px;
+  font-size:12px;
+  color: rgba(240,255,250,.78);
+   word-break: break-all;
+}
+@media (max-width: 980px){
+  .b2b-grid{ grid-template-columns: 1fr; }
+  .b2b-columns{ grid-template-columns: 1fr; }
+  .b2b-cartridge-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+/* B2B Tools: cleaned layout (summary + cartridges) */
+.b2b-hero{
+  padding: 16px;
+}
+.b2b-hero-top{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  min-height: 24px;
+}
+.b2b-hero-icons{
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  opacity: .9;
+  letter-spacing: .06em;
+}
+.b2b-hero-title{
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Desktop: B2B headings + color coding */
+.b2b-hero .section-title{
+  font-size: 18px;
+  margin-top: 16px;
+}
+.section-core{ color: rgba(120,255,120,.92); }
+.section-capital{ color: rgba(176,122,255,.92); }
+.section-node{ color: rgba(90,180,255,.92); }
+
+.b2b-hero-icons{
+  font-size: 13px;
+  gap: 12px;
+}
+.b2b-hero-ic{
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,255,170,0.22);
+  background: rgba(0,0,0,0.28);
+  box-shadow: inset 0 0 0 1px rgba(0,255,170,0.10);
+}
+.b2b-hero-core{ border-color: rgba(120,255,120,0.34); box-shadow: inset 0 0 0 1px rgba(120,255,120,0.16); }
+.b2b-hero-capital{ border-color: rgba(176,122,255,0.34); box-shadow: inset 0 0 0 1px rgba(176,122,255,0.16); }
+.b2b-hero-node{ border-color: rgba(90,180,255,0.34); box-shadow: inset 0 0 0 1px rgba(90,180,255,0.16); }
+
+/* Upgrades text plate: matches top card but narrower */
+.b2b-upgrades-card{
+  margin: 14px auto 0;
+  max-width: 980px;
+}
+.b2b-upgrades{
+  opacity: .92;
+  line-height: 1.6;
+}
+
+/* Make the blurb plate pop (distinct wireframe for readability) */
+.b2b-cartridge-bottom{
+  border-radius: 8px;
+  border: 1px solid rgba(120,255,255,0.40);
+  background: rgba(0,0,0,0.35);
+  box-shadow: inset 0 0 0 1px rgba(120,255,255,0.10);
+}
+.b2b-cartridge-blurb{
+  color: rgba(240,255,250,0.92);
+}
+
+/* Title on the same plane as the top-right icons */
+.b2b-hero-title-inline{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+}
+
+.b2b-hero-span{
+  opacity: .6;
+  letter-spacing: .22em;
+}
+
+.b2b-columns{
+  margin-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: start;
+}
+.b2b-col{
+  min-width: 0;
+  text-align: center;
+}
+.b2b-bullets{
+  margin: 10px 0 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 12px;
+  opacity: .86;
+  line-height: 1.55;
+}
+.b2b-bullets li{
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Core Infrastructure: compact 2-column cluster */
+.b2b-bullets-core{
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 18px;
+  row-gap: 6px;
+}
+.b2b-bullets-core li{
+  margin: 0;
+  justify-content: flex-start;
+}
+
+/* Capital Infrastructure: tight 2-row cluster (3 columns) */
+.b2b-bullets-capital{
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 18px;
+  row-gap: 6px;
+}
+.b2b-bullets-capital li{
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.b2b-bullet-icon{
+  width: 18px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.b2b-cartridge-grid{
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 18px;
+}
+.b2b-cartridge{
+  --car-wire: rgba(0,255,170,0.55);
+  --car-wire-strong: rgba(0,255,170,0.85);
+  display: block;
+  border-radius: 10px;
+  border: 2px solid var(--car-wire);
+  background: rgba(0,0,0,0.52);
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+  color: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.03),
+    0 0 22px rgba(0,255,170,0.16);
+  padding: 10px;
+  aspect-ratio: 1 / 1;
+}
+.b2b-cartridge:hover{
+  border-color: var(--car-wire-strong);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.03),
+    0 0 28px rgba(0,255,170,0.22);
+}
+
+/* Section wireframe colors */
+.b2b-cartridge.b2b-core{ --car-wire: rgba(120,255,120,0.62); --car-wire-strong: rgba(120,255,120,0.92); }
+.b2b-cartridge.b2b-capital{ --car-wire: rgba(176,122,255,0.58); --car-wire-strong: rgba(176,122,255,0.88); }
+.b2b-cartridge.b2b-node{ --car-wire: rgba(90,180,255,0.58); --car-wire-strong: rgba(90,180,255,0.88); }
+.b2b-cartridge.b2b-payme{ --car-wire: rgba(255,220,90,0.62); --car-wire-strong: rgba(255,220,90,0.92); }
+.b2b-cartridge.b2b-gotnodes{ --car-wire: rgba(90,180,255,0.62); --car-wire-strong: rgba(90,180,255,0.92); }
+.b2b-cartridge-spacer{
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.b2b-cartridge-top{
+  height: 30px;
+  border-radius: 6px;
+  border: 1px solid color-mix(in srgb, var(--car-wire) 70%, transparent);
+  background: color-mix(in srgb, var(--car-wire) 10%, rgba(0,0,0,0.25));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 6px;
+}
+.b2b-cartridge-title{
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .92;
+  line-height: 1;
+}
+
+.b2b-cartridge-mid{
+  margin-top: 12px;
+  height: auto;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.b2b-cartridge-icon{
+  font-size: 22px;
+  line-height: 1;
+}
+
+.b2b-cartridge-bottom{
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,255,170,0.12);
+  background: rgba(0,0,0,.55);
+  padding: 8px 8px;
+  text-align: center;
+}
+.b2b-cartridge-blurb{
+  font-size: 11px;
+  opacity: .8;
+  line-height: 1.35;
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Mobile: swap the dense 8-col cartridge matrix for a readable list */
+.b2b-mobile-list{
+  display: none;
+}
+.b2b-mobile-section{
+  margin-top: 14px;
+}
+.b2b-mobile-item{
+  display: block;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,170,0.18);
+  background: #000;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: inset 0 0 0 1px rgba(0,255,170,0.08);
+}
+.b2b-mobile-item + .b2b-mobile-item{
+  margin-top: 10px;
+}
+.b2b-mobile-item-title{
+  font-size: 13px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  opacity: .92;
+}
+.b2b-mobile-item-blurb{
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: .8;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.b2b-mobile-item-meta{
+  margin-top: 8px;
+  font-size: 11px;
+  opacity: .65;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 640px){
+  .b2b-hero{ padding: 14px; }
+  .b2b-hero-top{
+    justify-content: center;
+    min-height: unset;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .b2b-hero-title-inline{
+    position: static;
+    transform: none;
+    pointer-events: auto;
+  }
+  .b2b-hero-icons{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+  }
+
+  /* Hide the desktop summary columns + cartridge matrix on mobile */
+  .b2b-columns{ display: none; }
+  .b2b-cartridge-grid{ display: none; }
+
+  /* Show the mobile-friendly list */
+  .b2b-mobile-list{ display: block; }
+}

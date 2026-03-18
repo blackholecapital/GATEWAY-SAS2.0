@@ -1,0 +1,172 @@
+.perks-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.perk{
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+}
+.perk-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.perk-title{
+  font-size: 12px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+.perk-tier{
+  font-size: 11px;
+  opacity: .85;
+  border: 1px solid rgba(0,255,170,0.18);
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.perk-locked{
+  border-color: rgba(255,70,70,0.20);
+}
+
+/* Perk CTA coloring: green = open, red = locked (demo unlock uses sign message) */
+.perk .perk-pill-open{
+  border-color: rgba(0,255,170,0.28);
+}
+
+.perk .perk-pill-locked{
+  border-color: rgba(255,70,70,0.30);
+  background: rgba(255,70,70,0.10);
+}
+
+@media (max-width: 900px){
+  .perks-grid{ grid-template-columns: 1fr; }
+}
+
+
+/* Perks header split (match VIP branding pattern) */
+.perks-top-split{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.perks-brand-row{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.perks-brand-avatar{
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,255,170,0.22);
+  background: rgba(0,0,0,.28);
+  display: grid;
+  place-content: center;
+  gap: 2px;
+  box-shadow: inset 0 0 0 1px rgba(0,255,170,0.10);
+}
+.perks-brand-emoji{
+  line-height: 1;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Bottom split: marketplace + coupons */
+.perks-bottom-split{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.perks-market-list{
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+.perks-item{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px dashed rgba(0,255,170,0.14);
+  background: rgba(0,0,0,.12);
+}
+.perks-thumb{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,170,0.18);
+  background: rgba(0,0,0,.22);
+  display: grid;
+  place-content: center;
+}
+.perks-item-text{
+  flex: 1;
+  min-width: 0;
+}
+.perks-item-title{
+  font-size: 13px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.perks-item-sub{
+  margin-top: 4px;
+  font-size: 12px;
+  opacity: .78;
+}
+.perks-item-actions{
+  display: flex;
+  gap: 10px;
+}
+
+.perks-coupon-grid{
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.perks-coupon{
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px dashed rgba(0,255,170,0.14);
+  background: rgba(0,0,0,.12);
+  display: grid;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.perks-coupon:hover{
+  border-color: rgba(0,255,170,0.30);
+}
+.perks-coupon-ic{
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,170,0.18);
+  background: rgba(0,0,0,.22);
+  display: grid;
+  place-content: center;
+}
+.perks-coupon-title{
+  font-size: 12px;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+.perks-coupon-sub{
+  font-size: 12px;
+  opacity: .78;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px){
+  .perks-top-split{ grid-template-columns: 1fr; }
+  .perks-bottom-split{ grid-template-columns: 1fr; }
+  .perks-coupon-grid{ grid-template-columns: 1fr; }
+}

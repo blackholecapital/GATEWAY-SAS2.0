@@ -1,0 +1,318 @@
+.landing{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  padding: 18px;
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+  gap: 14px;
+    overflow: hidden;
+
+  /* Landing-only wallpaper knobs */
+  --landing-bg-size: 90% auto; /* try 90% auto for more zoom-out */
+  --landing-bg-offset-y: 0px;   /* if you need it lower: 20px, 40px */
+}
+
+/* Background art (fixed): SVG + subtle vignette */
+.landing::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+   /* Wallpaper comes from App.jsx (single source of truth) */
+  background-image: none;
+  background-repeat: no-repeat;
+  opacity: .95;
+  filter: saturate(1.05) contrast(1.02);
+  z-index: -3;
+}
+
+.landing::after{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at 35% 20%, rgba(0,255,170,.10), rgba(0,0,0,.82) 60%, rgba(0,0,0,.92));
+  z-index: -2;
+}
+
+.landing-topbar{
+  position: fixed;
+  top: 14px;
+  left: 18px;
+  z-index: 40;
+  font-size: 12px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0,0,0,.72);
+  border: 1px solid rgba(0,255,170,.22);
+  box-shadow: 0 10px 24px rgba(0,0,0,.55);
+  backdrop-filter: blur(4px);
+}
+
+.landing-connect{
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  z-index: 50;
+}
+
+.landing-top{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.sys-notes{
+  background: rgba(0,0,0,.55);
+  border: 2px solid rgba(0,255,120,.9);
+  border-radius: 10px;
+  padding: 16px;
+  max-width: 520px;
+  box-shadow: 0 0 0 1px rgba(0,255,120,.35) inset, 0 0 22px rgba(0,255,120,.22);
+  backdrop-filter: blur(6px);
+}
+
+.sys-notes .t{
+  font-size: 14px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.sys-notes .p{
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(170,255,220,.95);
+  text-shadow: 0 0 10px rgba(0,0,0,.65);
+}
+
+.sys-notes .sub{
+  margin-top: 12px;
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(191,255,230,.88);
+}
+
+.sys-notes a{
+  color: rgba(0,255,170,.9);
+  text-decoration: underline;
+}
+
+.sys-notes a:hover{
+  filter: drop-shadow(0 0 10px rgba(0,255,170,.35));
+}
+
+.landing-mid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding-top: 7vh;
+}
+
+.enter-wrap{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+  pointer-events: none;
+}
+
+.enter-btn{
+  appearance: none;
+  border: 1px solid rgba(255,80,80,.75);
+  color: rgba(255,255,255,.92);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 18px 28px;
+  border-radius: 999px;
+  cursor: pointer;
+  pointer-events: auto;
+  background: linear-gradient(180deg, rgba(255,60,60,.92), rgba(150,0,0,.92));
+  box-shadow: 0 18px 34px rgba(0,0,0,.55), 0 6px 0 rgba(80,0,0,.85);
+  transform: translateY(0);
+}
+
+.enter-btn:hover{
+  filter: drop-shadow(0 0 14px rgba(255,80,80,.55));
+}
+
+.enter-btn:active{
+  transform: translateY(2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.55), 0 4px 0 rgba(80,0,0,.85);
+}
+
+@media (max-width: 900px){
+  .landing{ padding: 14px; }
+  .landing-top{ grid-template-columns: 1fr; }
+  .sys-notes{ max-width: 100%; }
+
+  .landing-gateway{
+    position: static;
+    left: auto;
+    bottom: auto;
+    justify-content: center;
+  }
+
+  .landing-gateway .sys-notes{
+    width: min(920px, calc(100vw - 36px));
+    max-width: 920px;
+    max-height: none;
+    overflow: visible;
+  }
+}
+
+.landing-logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 18px;
+  border-radius:16px;
+  border:1px solid rgba(0,255,170,.18);
+  background: rgba(0,0,0,.55);
+  box-shadow: 0 18px 34px rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
+}
+
+.landing-drop{
+  width:44px;
+  height:44px;
+  object-fit:contain;
+  filter: drop-shadow(0 0 12px rgba(0,255,170,.25));
+}
+
+.landing-title{
+  font-size:26px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  line-height:1.1;
+}
+
+.landing-sub{
+  margin-top:6px;
+  font-size:12px;
+  letter-spacing:.20em;
+  text-transform:uppercase;
+  color: rgba(191,255,230,.88);
+}
+
+/* Landing: referral widget + watermark + centered Gateway card */
+.landing-referral{
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 30;
+  transform-origin: left bottom;
+  transform: scale(.62);
+  max-width: 280px;
+  max-height: 170px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.landing-watermark{
+  position: fixed;
+  right: 18px;
+  bottom: 16px;
+  width: 260px;
+  height: auto;
+  opacity: .22;
+  filter: drop-shadow(0 0 18px rgba(0,255,170,.12));
+  pointer-events: none;
+  z-index: 5;
+}
+
+.landing-gateway{
+  position: fixed;
+  left: 18px;
+  /* Adjust this to move the Gateway notes box up/down */
+  top: calc(150px + var(--landing-gateway-offset-y, 1000px));
+  z-index: 35;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.landing-gateway .sys-notes{
+  width: min(620px, calc(100vw - 360px));
+  max-width: 620px;
+  max-height: 420px;
+  overflow: auto;
+}
+/* Mobile override (must come AFTER the fixed-position rules above) */
+@media (max-width: 900px){
+  .landing-gateway{
+    position: static;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    justify-content: center;
+    width: 100%;
+    padding-inline: 14px;
+    box-sizing: border-box;
+  }
+
+  .landing-gateway .sys-notes{
+    width: calc(100vw - 28px);
+    max-width: 920px;
+    max-height: none;
+    overflow: visible;
+  }
+}
+/* Make the center .xyz Labs mark punchier */
+.landing-logo{
+  padding: 18px 22px;
+  border-radius: 18px;
+  border: 1px solid rgba(0,255,170,.26);
+  background: rgba(0,0,0,.58);
+  box-shadow: 0 22px 44px rgba(0,0,0,.6);
+  backdrop-filter: blur(3px);
+}
+
+.landing-drop{
+  width: 56px;
+  height: 56px;
+  filter: drop-shadow(0 0 18px rgba(0,255,170,.35));
+}
+
+.landing-title{
+  font-size: 34px;
+  letter-spacing: .14em;
+  text-shadow: 0 0 18px rgba(0,255,170,.18);
+}
+
+.landing-sub{
+  font-size: 12px;
+  letter-spacing: .24em;
+}
+
+@media (max-width: 900px){
+  .landing-referral{
+    transform: scale(.78);
+    left: 12px;
+    bottom: 12px;
+  }
+  .landing-watermark{
+    width: 200px;
+    right: 12px;
+    bottom: 10px;
+  }
+}
+ /* Mobile: allow scroll + avoid fixed CTA overlay */
+ @media (max-width: 900px){
+   .landing{ overflow: auto; }
+   .enter-wrap{ position: static; left:auto; right:auto; bottom:auto; margin-top: 16px; padding-bottom: 18px; }
+   .enter-btn{ width: min(92vw, 360px); }
+ }

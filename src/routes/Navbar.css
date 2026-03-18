@@ -1,0 +1,121 @@
+/* Navbar — bridge layout rules adapted for RainbowKit (no mobile picker overrides) */
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  overflow: visible;
+  background: rgba(6,11,9,.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(var(--wire-rgb),0.55);
+  box-shadow: 0 8px 26px rgba(var(--wire-rgb),0.10);
+}
+
+.nav-row{
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1.3fr;
+  gap: 12px;
+  overflow: visible;
+  align-items: center;
+  padding: 14px var(--page-gutter);
+}
+
+.brand-title{
+  letter-spacing: .10em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.brand-sub{
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: .8;
+}
+
+.nav-mid{
+  text-align: center;
+}
+.nav-mid-text{
+  font-size: 11px;
+  opacity: .9;
+  letter-spacing: .12em;
+}
+.links{
+  margin-top: 8px;
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 14px;
+}
+.links a{
+  opacity: .90;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(var(--wire-rgb),0.70);
+  background:
+    repeating-linear-gradient(0deg,
+      rgba(var(--wire-rgb),0.10) 0px,
+      rgba(var(--wire-rgb),0.03) 2px,
+      transparent 6px,
+      transparent 14px
+    ),
+    rgba(0,0,0,.22);
+  box-shadow:
+    inset 0 0 0 1px rgba(var(--wire-rgb),0.35),
+    0 0 18px rgba(var(--wire-rgb),0.12);
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+.links a.active{
+  opacity: 1;
+  border-color: rgba(var(--wire-rgb),0.98);
+  background:
+    repeating-linear-gradient(0deg,
+      rgba(var(--wire-rgb),0.14) 0px,
+      rgba(var(--wire-rgb),0.05) 2px,
+      transparent 6px,
+      transparent 14px
+    ),
+    rgba(0,0,0,.30);
+  box-shadow:
+    inset 0 0 0 1px rgba(var(--wire-rgb),0.55),
+    0 0 26px rgba(var(--wire-rgb),0.22);
+}
+
+.nav-right{
+  position: relative;
+  z-index: 60;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.connect-wrap{
+  position: relative;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+}
+
+/* IMPORTANT: ensure no overlays block taps */
+.nav *{ pointer-events: auto; }
+
+@media (max-width: 900px){
+  .nav-row{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .nav-left{ display: flex; justify-content: center; }
+  .nav-right{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .connect-wrap{
+    width: 100%;
+    justify-content: center;
+  }
+  /* RainbowKit button becomes full width on mobile */
+  .connect-wrap button{
+    width: 100%;
+  }
+}

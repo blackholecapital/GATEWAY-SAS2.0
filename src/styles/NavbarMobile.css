@@ -1,0 +1,41 @@
+/* Same base styling as desktop */
+@import url('./NavbarDesktop.css');
+
+/* Mobile nav = 5 small route buttons + compact wallet connect */
+
+.navbar-mobile{
+  gap: 6px;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden; /* prevents right push shifting cards */
+}
+
+.navbar-mobile .nav-links{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: nowrap; /* IMPORTANT: one row only */
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar-mobile .nav-link{
+  /* compact to keep everything in one row */
+  padding: 7px 8px;
+  font-size: 10px;
+  letter-spacing: .06em;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+/* Wallet connect pill (kept close to Admin pill) */
+.navbar-mobile .nav-connect-pill{
+  padding: 7px 8px;
+  font-size: 10px;
+  letter-spacing: .06em;
+  max-width: 92px; /* keeps it from pushing to a new line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 0 0 auto;
+}

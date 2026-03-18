@@ -1,0 +1,44 @@
+.ref-page .hdr{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:10px;
+}
+.ref-page .title{
+  font-size:14px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.ref-list{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.ref-row{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+.ref-meta{
+  min-width:260px;
+}
+.ref-code{
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:rgba(191,255,230,.85);
+}
+.ref-url{
+  font-size:12px;
+  color:rgba(240,255,250,.90);
+  word-break: break-all;
+  max-width: 760px;
+}
+.ref-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}

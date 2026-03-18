@@ -1,0 +1,80 @@
+:root {
+  --overlay-radius: 24px;
+  --overlay-glow: 0 0 0 1px rgba(255,255,255,0.08), 0 24px 60px rgba(0,0,0,0.35);
+  --overlay-spacing: 16px;
+  --overlay-font-scale: 1;
+  --overlay-card-opacity: 0.88;
+  --overlay-accent: rgba(0,255,170,0.85);
+  --overlay-shadow: 0.35;
+}
+
+.overlay-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--overlay-spacing);
+}
+
+.overlay-page-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.overlay-page-title {
+  font-size: calc(1.4rem * var(--overlay-font-scale));
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.overlay-page-sub {
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.overlay-grid {
+  display: grid;
+  gap: var(--overlay-spacing);
+}
+
+.overlay-grid-gate {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.overlay-grid-vip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.overlay-grid-vip .zone-hero {
+  grid-column: 1 / -1;
+}
+
+.overlay-grid-perks {
+  grid-template-columns: 1.1fr 1.2fr;
+}
+
+.overlay-grid-perks .zone-hero {
+  grid-column: 1 / -1;
+}
+
+.overlay-grid-account {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.overlay-grid-account .zone-top-left {
+  grid-column: span 2;
+}
+
+.overlay-grid-account .zone-top-right {
+  grid-column: span 1;
+}
+
+@media (max-width: 980px) {
+  .overlay-grid-gate,
+  .overlay-grid-vip,
+  .overlay-grid-perks,
+  .overlay-grid-account {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,105 @@
+/* Mobile-only file (loaded ONLY by B2BToolsMobile.jsx) */
+
+.b2b-hero{
+  padding: 16px;
+}
+.b2b-hero.card{
+  background: rgba(0,0,0,.55);
+  border: 1px solid rgba(0,255,170,0.18);
+  box-shadow: inset 0 0 0 1px rgba(0,255,170,0.08);
+  backdrop-filter: blur(6px);
+}
+.b2b-hero-top{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  min-height: 24px;
+}
+.b2b-hero-icons{
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  opacity: .9;
+  letter-spacing: .06em;
+}
+.b2b-hero-title-inline{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  pointer-events: none;
+}
+.b2b-hero-span{
+  opacity: .6;
+  letter-spacing: .22em;
+}
+
+/* Mobile list UI */
+.b2b-mobile-list{
+  margin-top: 10px;
+}
+
+.b2b-mobile-section{
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,170,0.18);
+  background: rgba(0,0,0,.55);
+  box-shadow: inset 0 0 0 1px rgba(0,255,170,0.08);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.b2b-mobile-section-title{
+  font-size: 14px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: rgba(191,255,230,.90);
+  margin-bottom: 8px;
+}
+
+.b2b-mobile-tool{
+  padding: 10px 0;
+  border-top: 1px solid rgba(0,255,170,0.10);
+}
+.b2b-mobile-tool:first-child{
+  border-top: none;
+  padding-top: 0;
+}
+
+.b2b-mobile-tool-row{
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.b2b-mobile-tool-icon{
+  width: 18px;
+  flex: 0 0 18px;
+  line-height: 1.2;
+  margin-top: 1px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.b2b-mobile-tool-name{
+  display: inline-block;
+  color: rgba(0,255,170,.95);
+  text-decoration: underline;
+  font-size: 13px;
+  line-height: 1.2;
+}
+.b2b-mobile-tool-name:hover{
+  filter: drop-shadow(0 0 10px rgba(0,255,170,.35));
+}
+
+.b2b-mobile-tool-blurb{
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.45;
+  opacity: .82;
+  color: rgba(240,255,250,.86);
+  overflow-wrap: anywhere;
+}

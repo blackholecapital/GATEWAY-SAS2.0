@@ -1,0 +1,13 @@
+@import url('./LandingDesktop.css');
+
+.landing{
+  padding: 14px;
+}
+
+.landing-headline{
+  font-size: 22px;
+}
+
+.landing-card{
+  padding: 14px;
+}

@@ -1,0 +1,167 @@
+/* --- ORIGINAL Navbar.css CONTENT --- */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(0,255,170,0.18);
+  background: rgba(0,0,0,.60);
+  backdrop-filter: blur(10px);
+}
+
+.nav-left{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-ic{
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0,255,170,.25));
+}
+
+.brand-text{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.brand-top{
+  font-size: 13px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  opacity: .92;
+}
+
+.brand-sub{
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  opacity: .65;
+}
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,255,170,0.18);
+  background: rgba(0,0,0,.35);
+  text-decoration: none;
+  color: rgba(240,255,250,.92);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: transform .12s ease, filter .12s ease, border-color .12s ease;
+}
+
+.nav-link:hover{
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 12px rgba(0,255,170,.20));
+  border-color: rgba(0,255,170,0.30);
+}
+
+.nav-link.active{
+  border-color: rgba(0,255,170,0.55);
+  background: rgba(0,255,170,.10);
+}
+
+.nav-right{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-btn{
+  border-radius: 999px;
+  border: 1px solid rgba(0,255,170,0.25);
+  background: rgba(0,0,0,.35);
+  color: rgba(240,255,250,.92);
+  padding: 8px 10px;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav-btn:hover{
+  filter: drop-shadow(0 0 12px rgba(0,255,170,.20));
+}
+
+.nav-me{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.me-line{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,255,170,0.18);
+  background: rgba(0,0,0,.35);
+}
+
+.me-dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0,255,170,.75);
+  box-shadow: 0 0 10px rgba(0,255,170,.30);
+}
+
+.me-label{
+  font-size: 12px;
+  letter-spacing: .08em;
+  opacity: .9;
+}
+
+.nav-toast{
+  position: fixed;
+  top: 62px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,170,0.25);
+  background: rgba(0,0,0,.75);
+  color: rgba(240,255,250,.92);
+  font-size: 12px;
+  letter-spacing: .08em;
+  z-index: 999;
+  box-shadow: 0 12px 40px rgba(0,0,0,.35);
+}
+
+/* clamp long tenant strings so scraped brand names don’t blow up the header */
+.brand-text { min-width: 0; max-width: 620px; }
+.brand-top, .brand-sub { max-width: 620px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* --- end --- */

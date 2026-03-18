@@ -1,0 +1,36 @@
+/* shared page accents (nodes-style spacing + responsive grid) */
+.hero{
+  padding: 18px;
+}
+.hero-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.hero-title{
+  font-size: 22px;
+  letter-spacing: .06em;
+}
+.hero-sub{
+  margin-top: 6px;
+  font-size: 12px;
+  opacity: .82;
+}
+.hero-text{
+  margin-top: 14px;
+  font-size: 12px;
+  opacity: .86;
+  line-height: 1.5;
+}
+.hero-plate{
+  border: 1px solid rgba(0,255,170,0.16);
+  border-radius: 14px;
+  padding: 10px 12px;
+  opacity: .75;
+}
+
+@media (max-width: 900px){
+  .hero-top{ flex-direction: column; align-items: flex-start; }
+  .hero-plate{ width: 100%; text-align: center; }
+}
