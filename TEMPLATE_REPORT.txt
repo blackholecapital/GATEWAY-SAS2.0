@@ -1,0 +1,52 @@
+TEMPLATE_REPORT.txt — B2Bdemo.xyz-Labs
+
+Base repo:
+- wallet-gate-xyz-Labs-main.zip (provided)
+
+Changes implemented (ONLY what was requested):
+1) New Homepage Route (/)
+- Added / route as a standalone Landing page (no top nav, no existing layout wrapper).
+- Background image routing:
+  - If route === "/" => /public/wallpaper555.jpg
+  - Else => /public/wallpaper333.png
+- Implemented via inline backgroundImage style on the .app-shell in src/App.jsx.
+
+2) Homepage Layout
+- Top-left: "System Notes" box (semi-transparent dark, padding 16px, radius 8px)
+  - src/routes/Landing.jsx + src/routes/Landing.css
+- Top-right: Referral Widget (WidgetV) extracted conceptually from referral repo logic:
+  - Component: src/components/referrals/WidgetV.jsx
+  - CSS: src/components/referrals/WidgetV.css + src/components/referrals/WidgetShared.css
+  - Storage + link generation: src/lib/referralStore.js (KEY = mktmaker_referral_store_v1)
+- Bottom-center: Large red 3D button "ENTER THE LAB"
+  - If wallet not connected => opens RainbowKit connect modal
+  - If wallet connected => navigates to /vip
+
+3) Referral Admin page inside WalletGate Admin
+- Added "Referrals" button inside existing Admin dashboard card.
+- New route: /admin/referrals
+- Page shows list of stored referral links + copy button.
+  - src/routes/AdminReferrals.jsx + src/routes/AdminReferrals.css
+- Uses the same localStorage KEY as WidgetV: mktmaker_referral_store_v1
+
+4) B2B Tools button in top navigation
+- Added navbar link "B2B Tools" => /b2b-tools
+
+5) B2B Tools page
+- Route: /b2b-tools (ProtectedRoute)
+- Cards with hardcoded titles + URLs opening in new tab (no placeholders).
+  - src/routes/B2BTools.jsx + src/routes/B2BTools.css
+
+6) Admin wallet check (UI-only)
+- If connected wallet matches:
+  0x3a71f0695DACde00CcECc622556F711E2b4d50a0
+  then navbar shows: "Admin Mode Enabled"
+- Implemented in src/components/Navbar.jsx (does NOT alter VIP/auth logic).
+
+Routing notes:
+- Existing Gate page (previous "/") is now available at "/gate" so it still renders under the normal navbar/layout.
+- Protected routes still redirect unauthenticated users to "/" (Landing), preserving the existing WalletGate flow.
+
+Added assets:
+- public/wallpaper333.png
+- public/wallpaper555.jpg

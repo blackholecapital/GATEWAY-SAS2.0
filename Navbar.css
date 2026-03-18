@@ -1,0 +1,153 @@
+/* Navbar — bridge layout rules adapted for RainbowKit (no mobile picker overrides) */
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  overflow: visible;
+  background: rgba(6,11,9,.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,255,170,0.14);
+}
+
+.nav-row{
+  display: grid;
+  grid-template-columns: 1fr 1.1fr 1.3fr;
+  gap: 12px;
+  overflow: visible;
+  align-items: center;
+  padding: 14px var(--page-gutter);
+}
+
+.brand-title{
+  letter-spacing: .10em;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.brand-sub{
+  margin-top: 4px;
+  font-size: 11px;
+  opacity: .8;
+}
+
+.nav-mid{
+  text-align: center;
+}
+.nav-mid-text{
+  font-size: 11px;
+  opacity: .9;
+  letter-spacing: .12em;
+}
+.links{
+  margin-top: 8px;
+  display: inline-flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 14px;
+}
+.links a{
+  opacity: .86;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,255,170,0.16);
+  background: rgba(0,0,0,.20);
+  box-shadow:
+    inset 0 0 0 1px rgba(0,255,170,0.10),
+    inset 0 0 0 3px rgba(0,255,170,0.06);
+  letter-spacing: .10em;
+  text-transform: uppercase;
+}
+.links a.active{
+  opacity: 1;
+  border-color: rgba(0,255,170,0.34);
+  background: rgba(0,0,0,.30);
+  box-shadow:
+    inset 0 0 0 1px rgba(0,255,170,0.22),
+    inset 0 0 0 3px rgba(0,255,170,0.10);
+}
+
+.nav-right{
+  position: relative;
+  z-index: 60;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+.connect-wrap{
+  position: relative;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+}
+
+/* IMPORTANT: ensure no overlays block taps */
+.nav *{ pointer-events: auto; }
+
+@media (max-width: 900px){
+  .nav-row{
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "left right"
+      "mid mid";
+    gap: 8px;
+    padding: 10px var(--page-gutter);
+    text-align: left;
+  }
+  .nav-left{ grid-area: left; display: flex; justify-content: flex-start; }
+  .nav-mid{ grid-area: mid; text-align: center; }
+  .nav-right{
+    grid-area: right;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 6px;
+  }
+
+  /* Reduce header tab size a lot on mobile */
+  .brand-title{ font-size: 12px; letter-spacing: .08em; }
+  .brand-sub{ font-size: 10px; margin-top: 2px; }
+  .links{ margin-top: 6px; gap: 8px; font-size: 12px; }
+  .links a{ padding: 7px 9px; border-radius: 10px; letter-spacing: .08em; }
+
+  /* Keep Connect Wallet compact and aligned next to the title */
+  .connect-wrap{ width: auto; justify-content: flex-end; }
+  .connect-wrap button{
+    width: auto;
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  /* Keep pills compact on mobile */
+  .pill{ padding: 7px 10px; font-size: 12px; border-radius: 999px; }
+}
+
+
+/* demo: VIP glow after signing */
+.links a.vip-glow{
+  opacity: 1;
+  border-color: rgba(0,255,170,0.46);
+  box-shadow:
+    inset 0 0 0 1px rgba(0,255,170,0.28),
+    0 0 18px rgba(0,255,170,0.24);
+  animation: vipGlowPulse 1.15s ease-in-out infinite;
+}
+@keyframes vipGlowPulse{
+  0%,100%{
+    box-shadow:
+      inset 0 0 0 1px rgba(0,255,170,0.22),
+      0 0 14px rgba(0,255,170,0.18);
+  }
+  50%{
+    box-shadow:
+      inset 0 0 0 1px rgba(0,255,170,0.34),
+      0 0 26px rgba(0,255,170,0.30);
+  }
+}
+
+/* global dropdown toast (shown from navbar) */
+.toast-global{
+  top: 72px;
+}
+
+.admin-badge{background: rgba(0,255,170,.10); border-color: rgba(0,255,170,.35);}

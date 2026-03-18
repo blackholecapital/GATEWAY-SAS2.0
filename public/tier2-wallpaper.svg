@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#04110c"/>
+      <stop offset="0.55" stop-color="#02110b"/>
+      <stop offset="1" stop-color="#000605"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="30%" cy="25%" r="70%">
+      <stop offset="0" stop-color="#00ffab" stop-opacity="0.12"/>
+      <stop offset="0.55" stop-color="#00ffab" stop-opacity="0.03"/>
+      <stop offset="1" stop-color="#00ffab" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="neon" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <g opacity="0.24">
+    <g stroke="#00ffab" stroke-opacity="0.10" stroke-width="1">
+      <path d="M0 0H1600V900H0Z" fill="none"/>
+      <path d="M100 0V900"/><path d="M200 0V900"/><path d="M300 0V900"/><path d="M400 0V900"/>
+      <path d="M500 0V900"/><path d="M600 0V900"/><path d="M700 0V900"/><path d="M800 0V900"/>
+      <path d="M900 0V900"/><path d="M1000 0V900"/><path d="M1100 0V900"/><path d="M1200 0V900"/>
+      <path d="M1300 0V900"/><path d="M1400 0V900"/><path d="M1500 0V900"/>
+      <path d="M0 80H1600"/><path d="M0 160H1600"/><path d="M0 240H1600"/><path d="M0 320H1600"/>
+      <path d="M0 400H1600"/><path d="M0 480H1600"/><path d="M0 560H1600"/><path d="M0 640H1600"/>
+      <path d="M0 720H1600"/><path d="M0 800H1600"/>
+    </g>
+  </g>
+
+  <g opacity="0.22" filter="url(#neon)">
+    <text x="120" y="130" text-anchor="start"
+      font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace"
+      font-size="86" letter-spacing="0.08em"
+      fill="#00ffab">TIER 2</text>
+  </g>
+
+  <g filter="url(#neon)" opacity="0.70">
+    <path d="M1350 160
+             C1460 300 1525 400 1525 520
+             C1525 670 1425 790 1290 790
+             C1155 790 1055 670 1055 520
+             C1055 400 1120 300 1230 160
+             C1270 110 1310 80 1350 160Z"
+          fill="none" stroke="#00ffab" stroke-opacity="0.55" stroke-width="5"/>
+    <circle cx="1290" cy="520" r="120" fill="none" stroke="#00c8ff" stroke-opacity="0.16" stroke-width="4"/>
+  </g>
+
+  <rect width="1600" height="900" fill="black" opacity="0.20"/>
+</svg>
