@@ -19,47 +19,55 @@ import { mainnet, base, arbitrum, optimism, polygon } from 'wagmi/chains'
 import App from './App.jsx'
 import { TenantProvider } from './context/TenantContext.jsx'
  
- const appName = import.meta.env.VITE_APP_NAME || 'Gateway'
- const projectId = import.meta.env.VITE_WC_PROJECT_ID || ''
- const isMobile = typeof navigator !== 'undefined' && /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
- if (isMobile && !projectId) {
-   console.error('[WalletConnect] Missing VITE_WC_PROJECT_ID. Mobile wallets (Phantom, etc.) require a WalletConnect Project ID.')
- }
- 
- const defaultChainId = Number(import.meta.env.VITE_DEFAULT_CHAIN_ID || 1)
- 
- const allChains = [mainnet, base, arbitrum, optimism, polygon]
- const chains = allChains
+const appName = import.meta.env.VITE_APP_NAME || 'Gateway'
+const projectId = import.meta.env.VITE_WC_PROJECT_ID || ''
+const isMobile = typeof navigator !== 'undefined' && /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)
+const hasWalletConnect = Boolean(projectId)
 
- const connectors = connectorsForWallets(
-   [
-     {
-       groupName: 'Recommended',
-       wallets: [phantomWallet, metaMaskWallet, rainbowWallet, walletConnectWallet, injectedWallet]
-     }
-   ],
-   { appName, projectId }
- )
-
- const config = createConfig({
-   chains,
-   connectors,
-   transports: {
-     [mainnet.id]: http(),
-     [base.id]: http(),
-     [arbitrum.id]: http(),
-     [optimism.id]: http(),
-     [polygon.id]: http()
-   },
-   ssr: false
- })
+if (isMobile && !hasWalletConnect) {
+  console.error('[WalletConnect] Missing VITE_WC_PROJECT_ID. Mobile wallets (Phantom, etc.) require a WalletConnect Project ID.')
+}
  
-  const queryClient = new QueryClient()
-  
- function getInitialChain() {
-   const c = chains.find(x => x.id === defaultChainId)
-   return c || chains[0]
- }
+const defaultChainId = Number(import.meta.env.VITE_DEFAULT_CHAIN_ID || 1)
+ 
+const allChains = [mainnet, base, arbitrum, optimism, polygon]
+const chains = allChains
+
+const recommendedWallets = [metaMaskWallet, injectedWallet]
+
+if (hasWalletConnect) {
+  recommendedWallets.unshift(phantomWallet, rainbowWallet, walletConnectWallet)
+}
+
+const connectors = connectorsForWallets(
+  [
+    {
+      groupName: 'Recommended',
+      wallets: recommendedWallets
+    }
+  ],
+  hasWalletConnect ? { appName, projectId } : { appName }
+)
+
+const config = createConfig({
+  chains,
+  connectors,
+  transports: {
+    [mainnet.id]: http(),
+    [base.id]: http(),
+    [arbitrum.id]: http(),
+    [optimism.id]: http(),
+    [polygon.id]: http()
+  },
+  ssr: false
+})
+ 
+const queryClient = new QueryClient()
+ 
+function getInitialChain() {
+  const c = chains.find(x => x.id === defaultChainId)
+  return c || chains[0]
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -84,4 +92,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </QueryClientProvider>
     </WagmiProvider>
   </React.StrictMode>
-);
+)
