@@ -1,0 +1,39 @@
+.w-wrap{width:100%;max-width:360px;margin:0 auto;font-family:var(--mono);}
+.w-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.w-input{flex:1;min-width:220px;background:rgba(0,0,0,.30);border:1px solid rgba(0,255,170,.22);border-radius:12px;padding:11px 12px;color:var(--fg0);outline:none;}
+.w-input:focus{border-color:var(--wire);}
+.w-btn{border-radius:12px;border:1px solid rgba(0,255,170,.22);background:rgba(0,255,170,.08);color:var(--fg0);padding:11px 12px;cursor:pointer;letter-spacing:.12em;text-transform:uppercase;font-size:12px;}
+.w-btn:hover{border-color:var(--wire);}
+.w-out{margin-top:10px;padding:10px 12px;border-radius:12px;border:1px dashed rgba(0,255,170,.22);background:rgba(0,0,0,.18);color:rgba(191,255,230,.92);font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.w-mini{margin-top:8px;color:rgba(191,255,230,.70);font-size:11px;letter-spacing:.08em;}
+.mm-card{
+  width:100%;
+  border:1px solid rgba(0,255,170,.22);
+  border-radius:12px;
+  background:#000;
+  box-shadow:0 10px 24px rgba(0,0,0,.35);
+}
+
+.mm-cardInner{
+  padding:10px;
+}
+
+/* keep RainbowKit button inside the widget aligned */
+.wV-connect{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+}
+
+/* Wallet button state */
+.w-btn-wallet.is-disconnected{
+  border-color: rgba(255,80,80,.75);
+  background: linear-gradient(180deg, rgba(255,60,60,.22), rgba(150,0,0,.22));
+}
+.w-btn-wallet.is-connected{
+  border-color: rgba(0,255,170,.65);
+  background: rgba(0,255,170,.16);
+}
+.w-btn-wallet:disabled{
+  opacity: 1;
+}

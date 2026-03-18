@@ -1,0 +1,10 @@
+.wV-hdr{font-size:12px;letter-spacing:.20em;text-transform:uppercase;color:var(--fg);margin-bottom:10px;}
+.wV-sub{font-size:11px;color:rgba(191,255,230,.72);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;}
+.wV-grid{display:grid;grid-template-columns:1fr;gap:10px;}
+.wV-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.wV-full{width:100%;}
+.wV-pill{padding:10px 12px;border-radius:999px;border:1px solid rgba(0,255,170,.22);background:rgba(0,0,0,.25);color:var(--fg);font-size:12px;letter-spacing:.12em;text-transform:uppercase;}
+.wV-pill strong{color:rgba(0,255,170,.92);font-weight:600;}
+.wV-outTitle{font-size:11px;color:rgba(191,255,230,.72);letter-spacing:.12em;text-transform:uppercase;margin-top:8px;}
+.wV-top{display:flex;gap:12px;align-items:flex-start;justify-content:space-between;}
+.wV-warn{margin-top:10px;padding:10px 12px;border-radius:12px;border:1px dashed rgba(255,200,0,.35);background:rgba(0,0,0,.25);color:rgba(255,220,120,.92);font-size:12px;letter-spacing:.06em;}
