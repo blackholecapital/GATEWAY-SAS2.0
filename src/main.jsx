@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import '@rainbow-me/rainbowkit/styles.css'
+
 import './styles/theme.css'
 
 import { WagmiProvider, createConfig, http } from 'wagmi'
