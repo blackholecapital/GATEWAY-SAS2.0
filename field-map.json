@@ -1,0 +1,102 @@
+{
+  "version": "1.0.0",
+  "sourceBranch": "demo-generator-3.0-claude-restore-letter-markers-EYSuA",
+  "targetBranch": "demo-generator-3.0-main",
+  "rules": {
+    "copyIfSamePath": true,
+    "preserveMainIfTargetOnly": true,
+    "skipIfSourceMissing": true
+  },
+  "samePathPrefixes": [
+    "pages.gate",
+    "pages.perks.topLinks",
+    "pages.perks.demoControls",
+    "pages.perks.tierCards",
+    "pages.perks.marketplace",
+    "pages.perks.marketplaceItems",
+    "pages.perks.campaigns",
+    "pages.perks.hero.title",
+    "pages.perks.hero.subtitle",
+    "pages.perks.hero.kickerButtons",
+    "pages.vip.hero.title",
+    "pages.vip.hero.emoji",
+    "pages.vip.quickLinks",
+    "pages.vip.partyBoard",
+    "pages.vip.announcementsBoard",
+    "pages.vip.postWidget",
+    "pages.vip.hero.kickerButtons",
+    "pages.account.hero.title",
+    "pages.account.hero.subtitle",
+    "pages.account.actions",
+    "pages.account.statusPanel",
+    "pages.account.rewards",
+    "pages.account.rewardsFeed",
+    "pages.account.referralWidget",
+    "pages.account.notes",
+    "pages.account.hero.kickerButtons"
+  ],
+  "explicitMap": {
+    "pages.vip.hero.body": "pages.vip.hero.subtitle",
+    "pages.vip.announcementsTop[0].title": "pages.vip.announcements[0].title",
+    "pages.vip.announcementsTop[0].body": "pages.vip.announcements[0].body",
+    "pages.vip.announcementsTop[1].title": "pages.vip.announcements[1].title",
+    "pages.vip.announcementsTop[1].body": "pages.vip.announcements[1].body",
+    "pages.account.quickActions[0].label": "pages.account.quickActions.items[0].title",
+    "pages.account.quickActions[0].desc": "pages.account.quickActions.items[0].body",
+    "pages.account.quickActions[0].cta": "pages.account.quickActions.items[0].cta",
+    "pages.account.quickActions[0].href": "pages.account.quickActions.items[0].href",
+    "pages.account.quickActions[1].label": "pages.account.quickActions.items[1].title",
+    "pages.account.quickActions[1].desc": "pages.account.quickActions.items[1].body",
+    "pages.account.quickActions[1].cta": "pages.account.quickActions.items[1].cta",
+    "pages.account.quickActions[1].href": "pages.account.quickActions.items[1].href",
+    "pages.account.quickActions[2].label": "pages.account.quickActions.items[2].title",
+    "pages.account.quickActions[2].desc": "pages.account.quickActions.items[2].body",
+    "pages.account.quickActions[2].cta": "pages.account.quickActions.items[2].cta",
+    "pages.account.quickActions[2].href": "pages.account.quickActions.items[2].href",
+    "pages.account.socialsPanel.items[0].label": "pages.account.socialsPanel.items[0].title",
+    "pages.account.socialsPanel.items[0].href": "pages.account.socialsPanel.items[0].href",
+    "pages.account.socialsPanel.items[1].label": "pages.account.socialsPanel.items[1].title",
+    "pages.account.socialsPanel.items[1].href": "pages.account.socialsPanel.items[1].href",
+    "pages.account.socialsPanel.items[2].label": "pages.account.socialsPanel.items[2].title",
+    "pages.account.socialsPanel.items[2].href": "pages.account.socialsPanel.items[2].href"
+  },
+  "targetOnlyPaths": [
+    "pages.perks.hero.kickerBadges[0]",
+    "pages.perks.hero.kickerBadges[1]",
+    "pages.perks.hero.kickerBadges[2]",
+    "pages.account.hero.kickerBadges[0]",
+    "pages.account.hero.kickerBadges[1]",
+    "pages.account.hero.kickerBadges[2]",
+    "socials.x",
+    "socials.instagram",
+    "socials.telegram",
+    "socials.discord",
+    "socials.youtube",
+    "socials.tiktok",
+    "socials.facebook",
+    "socials.engage",
+    "pages.account.socialsPanel.title",
+    "pages.account.socialsPanel.items[0].body",
+    "pages.account.socialsPanel.items[0].cta",
+    "pages.account.socialsPanel.items[1].body",
+    "pages.account.socialsPanel.items[1].cta",
+    "pages.account.socialsPanel.items[2].body",
+    "pages.account.socialsPanel.items[2].cta",
+    "pages.account.quickActions.title"
+  ],
+  "notes": {
+    "labelToTitle": [
+      "pages.account.quickActions[*].label -> pages.account.quickActions.items[*].title",
+      "pages.account.socialsPanel.items[*].label -> pages.account.socialsPanel.items[*].title"
+    ],
+    "descToBody": [
+      "pages.account.quickActions[*].desc -> pages.account.quickActions.items[*].body",
+      "pages.vip.hero.body -> pages.vip.hero.subtitle"
+    ],
+    "manualSeedSuggested": [
+      "socials.*",
+      "pages.perks.hero.kickerBadges[*]",
+      "pages.account.hero.kickerBadges[*]"
+    ]
+  }
+}

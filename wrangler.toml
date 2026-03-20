@@ -1,0 +1,6 @@
+name = "gateway-tenant-factory"
+pages_build_output_dir = "dist"
+
+[[r2_buckets]]
+binding = "TENANTS_BUCKET"
+bucket_name = "gateway-tenants"

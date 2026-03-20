@@ -1,0 +1,40 @@
+{
+  "goal": "Gateway skin test",
+  "editableFields": [
+    {
+      "label": "Wallpaper URL",
+      "path": "assets.wallpaper",
+      "type": "url"
+    },
+    {
+      "label": "YouTube URL",
+      "path": "tenantContent.pages.gate.slots.GATE-01.mediaUrl",
+      "type": "url"
+    },
+    {
+      "label": "Box A Line 1",
+      "path": "tenantContent.pages.gate.slots.GATE-02.title",
+      "type": "text"
+    },
+    {
+      "label": "Box A Line 2",
+      "path": "tenantContent.pages.gate.slots.GATE-02.body",
+      "type": "textarea"
+    },
+    {
+      "label": "Box A Line 3",
+      "path": "pages.gate.statusPanel.title",
+      "type": "text"
+    },
+    {
+      "label": "Box B Top",
+      "path": "tenantContent.pages.gate.slots.GATE-03.title",
+      "type": "text"
+    },
+    {
+      "label": "Box B Bottom",
+      "path": "tenantContent.pages.gate.slots.GATE-03.body",
+      "type": "textarea"
+    }
+  ]
+}

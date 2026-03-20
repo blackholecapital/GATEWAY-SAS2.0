@@ -1,0 +1,696 @@
+{
+  "version": "1.0.0",
+  "source": "src/pages/FactoryPage.jsx",
+  "fieldPaths": [
+    "pages.gate.hero.title",
+    "pages.gate.hero.subtitle",
+    "pages.gate.quickLinks[0].label",
+    "pages.gate.quickLinks[0].desc",
+    "pages.gate.quickLinks[0].href",
+    "pages.gate.quickLinks[0].cta",
+    "pages.gate.quickLinks[1].label",
+    "pages.gate.quickLinks[1].desc",
+    "pages.gate.quickLinks[1].href",
+    "pages.gate.quickLinks[1].cta",
+    "pages.gate.quickLinks[2].label",
+    "pages.gate.quickLinks[2].desc",
+    "pages.gate.quickLinks[2].href",
+    "pages.gate.quickLinks[2].cta",
+    "pages.gate.quickLinks[3].label",
+    "pages.gate.quickLinks[3].desc",
+    "pages.gate.quickLinks[3].href",
+    "pages.gate.quickLinks[3].cta",
+    "pages.gate.statusPanel.title",
+    "pages.gate.windows[0].title",
+    "pages.gate.windows[0].body",
+    "pages.gate.windows[1].title",
+    "pages.gate.windows[1].body",
+    "pages.gate.gateway.title",
+    "pages.gate.gateway.body",
+    "pages.gate.gateway.hint",
+    "pages.gate.gateway.buttonLabel",
+    "pages.gate.existingCustomers.title",
+    "pages.gate.existingCustomers.body",
+    "pages.gate.existingCustomers.items[0].title",
+    "pages.gate.existingCustomers.items[0].body",
+    "pages.gate.existingCustomers.items[0].meta",
+    "pages.gate.existingCustomers.items[1].title",
+    "pages.gate.existingCustomers.items[1].body",
+    "pages.gate.existingCustomers.items[1].meta",
+    "pages.gate.existingCustomers.items[2].title",
+    "pages.gate.existingCustomers.items[2].body",
+    "pages.gate.existingCustomers.items[2].meta",
+    "pages.gate.existingCustomers.items[2].cta",
+    "pages.gate.existingCustomers.items[2].href",
+    "pages.gate.hero.kickerButtons[0].label",
+    "pages.gate.hero.kickerButtons[0].href",
+    "pages.gate.hero.kickerButtons[1].label",
+    "pages.gate.hero.kickerButtons[1].href",
+    "pages.gate.hero.kickerButtons[2].label",
+    "pages.gate.hero.kickerButtons[2].href",
+    "pages.vip.hero.title",
+    "pages.vip.hero.subtitle",
+    "pages.vip.hero.emoji",
+    "pages.vip.announcements[0].title",
+    "pages.vip.announcements[0].body",
+    "pages.vip.announcements[1].title",
+    "pages.vip.announcements[1].body",
+    "pages.vip.quickLinks[0].label",
+    "pages.vip.quickLinks[0].desc",
+    "pages.vip.quickLinks[0].href",
+    "pages.vip.quickLinks[0].cta",
+    "pages.vip.quickLinks[1].label",
+    "pages.vip.quickLinks[1].desc",
+    "pages.vip.quickLinks[1].href",
+    "pages.vip.quickLinks[1].cta",
+    "pages.vip.quickLinks[2].label",
+    "pages.vip.quickLinks[2].desc",
+    "pages.vip.quickLinks[2].href",
+    "pages.vip.quickLinks[2].cta",
+    "pages.vip.partyBoard.title",
+    "pages.vip.partyBoard.items[0].title",
+    "pages.vip.partyBoard.items[0].body",
+    "pages.vip.partyBoard.items[0].when",
+    "pages.vip.partyBoard.items[1].title",
+    "pages.vip.partyBoard.items[1].body",
+    "pages.vip.partyBoard.items[1].when",
+    "pages.vip.partyBoard.items[2].title",
+    "pages.vip.partyBoard.items[2].body",
+    "pages.vip.partyBoard.items[2].when",
+    "pages.vip.announcementsBoard.title",
+    "pages.vip.announcementsBoard.items[0].title",
+    "pages.vip.announcementsBoard.items[0].body",
+    "pages.vip.announcementsBoard.items[0].when",
+    "pages.vip.announcementsBoard.items[1].title",
+    "pages.vip.announcementsBoard.items[1].body",
+    "pages.vip.announcementsBoard.items[1].when",
+    "pages.vip.announcementsBoard.items[2].title",
+    "pages.vip.announcementsBoard.items[2].body",
+    "pages.vip.announcementsBoard.items[2].when",
+    "pages.vip.postWidget.title",
+    "pages.vip.postWidget.pinnedTitle",
+    "pages.vip.postWidget.pinnedBody",
+    "pages.vip.hero.kickerButtons[0].label",
+    "pages.vip.hero.kickerButtons[0].href",
+    "pages.vip.hero.kickerButtons[1].label",
+    "pages.vip.hero.kickerButtons[1].href",
+    "pages.vip.hero.kickerButtons[2].label",
+    "pages.vip.hero.kickerButtons[2].href",
+    "pages.perks.hero.title",
+    "pages.perks.hero.subtitle",
+    "pages.perks.hero.kickerBadges[0]",
+    "pages.perks.hero.kickerBadges[1]",
+    "pages.perks.hero.kickerBadges[2]",
+    "pages.perks.topLinks[0].label",
+    "pages.perks.topLinks[0].desc",
+    "pages.perks.topLinks[0].href",
+    "pages.perks.topLinks[0].cta",
+    "pages.perks.topLinks[1].label",
+    "pages.perks.topLinks[1].desc",
+    "pages.perks.topLinks[1].href",
+    "pages.perks.topLinks[1].cta",
+    "pages.perks.topLinks[2].label",
+    "pages.perks.topLinks[2].desc",
+    "pages.perks.topLinks[2].href",
+    "pages.perks.topLinks[2].cta",
+    "pages.perks.demoControls.title",
+    "pages.perks.demoControls.body",
+    "pages.perks.tierCards[0].title",
+    "pages.perks.tierCards[0].tierLabel",
+    "pages.perks.tierCards[0].body",
+    "pages.perks.tierCards[0].buttonLabel",
+    "pages.perks.tierCards[1].title",
+    "pages.perks.tierCards[1].tierLabel",
+    "pages.perks.tierCards[1].body",
+    "pages.perks.tierCards[1].buttonLabel",
+    "pages.perks.tierCards[2].title",
+    "pages.perks.tierCards[2].tierLabel",
+    "pages.perks.tierCards[2].body",
+    "pages.perks.tierCards[2].buttonLabel",
+    "pages.perks.marketplace.title",
+    "pages.perks.marketplaceItems[0].title",
+    "pages.perks.marketplaceItems[0].body",
+    "pages.perks.marketplaceItems[0].costLabel",
+    "pages.perks.marketplaceItems[1].title",
+    "pages.perks.marketplaceItems[1].body",
+    "pages.perks.marketplaceItems[1].costLabel",
+    "pages.perks.marketplaceItems[2].title",
+    "pages.perks.marketplaceItems[2].body",
+    "pages.perks.marketplaceItems[2].costLabel",
+    "pages.perks.campaigns.title",
+    "pages.perks.campaigns.items[0].title",
+    "pages.perks.campaigns.items[0].body",
+    "pages.perks.campaigns.items[0].ctaLabel",
+    "pages.perks.campaigns.items[0].href",
+    "pages.perks.campaigns.items[1].title",
+    "pages.perks.campaigns.items[1].body",
+    "pages.perks.campaigns.items[1].ctaLabel",
+    "pages.perks.campaigns.items[1].href",
+    "pages.perks.campaigns.items[2].title",
+    "pages.perks.campaigns.items[2].body",
+    "pages.perks.campaigns.items[2].ctaLabel",
+    "pages.perks.campaigns.items[2].href",
+    "pages.perks.hero.kickerButtons[0].label",
+    "pages.perks.hero.kickerButtons[0].href",
+    "pages.perks.hero.kickerButtons[1].label",
+    "pages.perks.hero.kickerButtons[1].href",
+    "pages.perks.hero.kickerButtons[2].label",
+    "pages.perks.hero.kickerButtons[2].href",
+    "socials.x",
+    "socials.youtube",
+    "socials.discord",
+    "socials.engage",
+    "socials.facebook",
+    "socials.instagram",
+    "socials.tiktok",
+    "socials.telegram",
+    "pages.account.hero.title",
+    "pages.account.hero.subtitle",
+    "pages.account.hero.kickerBadges[0]",
+    "pages.account.hero.kickerBadges[1]",
+    "pages.account.hero.kickerBadges[2]",
+    "pages.account.actions[0].label",
+    "pages.account.actions[1].label",
+    "pages.account.statusPanel.title",
+    "pages.account.rewards.title",
+    "pages.account.rewards.subtitle",
+    "pages.account.rewards.rows[0].label",
+    "pages.account.rewards.rows[0].value",
+    "pages.account.rewards.rows[1].label",
+    "pages.account.rewards.rows[1].value",
+    "pages.account.rewards.rows[2].label",
+    "pages.account.rewards.rows[2].value",
+    "pages.account.rewardsFeed[0].title",
+    "pages.account.rewardsFeed[0].body",
+    "pages.account.rewardsFeed[1].title",
+    "pages.account.rewardsFeed[1].body",
+    "pages.account.rewardsFeed[2].title",
+    "pages.account.rewardsFeed[2].body",
+    "pages.account.referralWidget.title",
+    "pages.account.referralWidget.subtitle",
+    "pages.account.referralWidget.inputLabel",
+    "pages.account.referralWidget.generateCta",
+    "pages.account.referralWidget.buttons[0].label",
+    "pages.account.referralWidget.buttons[1].label",
+    "pages.account.quickActions.title",
+    "pages.account.quickActions.items[0].title",
+    "pages.account.quickActions.items[0].body",
+    "pages.account.quickActions.items[0].cta",
+    "pages.account.quickActions.items[0].href",
+    "pages.account.quickActions.items[1].title",
+    "pages.account.quickActions.items[1].body",
+    "pages.account.quickActions.items[1].cta",
+    "pages.account.quickActions.items[1].href",
+    "pages.account.quickActions.items[2].title",
+    "pages.account.quickActions.items[2].body",
+    "pages.account.quickActions.items[2].cta",
+    "pages.account.quickActions.items[2].href",
+    "pages.account.socialsPanel.title",
+    "pages.account.socialsPanel.items[0].title",
+    "pages.account.socialsPanel.items[0].body",
+    "pages.account.socialsPanel.items[0].cta",
+    "pages.account.socialsPanel.items[0].href",
+    "pages.account.socialsPanel.items[1].title",
+    "pages.account.socialsPanel.items[1].body",
+    "pages.account.socialsPanel.items[1].cta",
+    "pages.account.socialsPanel.items[1].href",
+    "pages.account.socialsPanel.items[2].title",
+    "pages.account.socialsPanel.items[2].body",
+    "pages.account.socialsPanel.items[2].cta",
+    "pages.account.socialsPanel.items[2].href",
+    "pages.account.notes.title",
+    "pages.account.notes.items[0].title",
+    "pages.account.notes.items[0].body",
+    "pages.account.notes.items[0].badge",
+    "pages.account.notes.items[1].title",
+    "pages.account.notes.items[1].body",
+    "pages.account.notes.items[1].badge",
+    "pages.account.notes.items[2].title",
+    "pages.account.notes.items[2].body",
+    "pages.account.notes.items[2].badge",
+    "pages.account.hero.kickerButtons[0].label",
+    "pages.account.hero.kickerButtons[0].href",
+    "pages.account.hero.kickerButtons[1].label",
+    "pages.account.hero.kickerButtons[1].href",
+    "pages.account.hero.kickerButtons[2].label",
+    "pages.account.hero.kickerButtons[2].href"
+  ],
+  "targetData": {
+    "pages": {
+      "gate": {
+        "hero": {
+          "title": "seed-1",
+          "subtitle": "seed-2",
+          "kickerButtons": [
+            {
+              "label": "seed-41",
+              "href": "seed-42"
+            },
+            {
+              "label": "seed-43",
+              "href": "seed-44"
+            },
+            {
+              "label": "seed-45",
+              "href": "seed-46"
+            }
+          ]
+        },
+        "quickLinks": [
+          {
+            "label": "seed-3",
+            "desc": "seed-4",
+            "href": "seed-5",
+            "cta": "seed-6"
+          },
+          {
+            "label": "seed-7",
+            "desc": "seed-8",
+            "href": "seed-9",
+            "cta": "seed-10"
+          },
+          {
+            "label": "seed-11",
+            "desc": "seed-12",
+            "href": "seed-13",
+            "cta": "seed-14"
+          },
+          {
+            "label": "seed-15",
+            "desc": "seed-16",
+            "href": "seed-17",
+            "cta": "seed-18"
+          }
+        ],
+        "statusPanel": {
+          "title": "seed-19"
+        },
+        "windows": [
+          {
+            "title": "seed-20",
+            "body": "seed-21"
+          },
+          {
+            "title": "seed-22",
+            "body": "seed-23"
+          }
+        ],
+        "gateway": {
+          "title": "seed-24",
+          "body": "seed-25",
+          "hint": "seed-26",
+          "buttonLabel": "seed-27"
+        },
+        "existingCustomers": {
+          "title": "seed-28",
+          "body": "seed-29",
+          "items": [
+            {
+              "title": "seed-30",
+              "body": "seed-31",
+              "meta": "seed-32"
+            },
+            {
+              "title": "seed-33",
+              "body": "seed-34",
+              "meta": "seed-35"
+            },
+            {
+              "title": "seed-36",
+              "body": "seed-37",
+              "meta": "seed-38",
+              "cta": "seed-39",
+              "href": "seed-40"
+            }
+          ]
+        }
+      },
+      "vip": {
+        "hero": {
+          "title": "seed-47",
+          "subtitle": "seed-48",
+          "emoji": "seed-49",
+          "kickerButtons": [
+            {
+              "label": "seed-89",
+              "href": "seed-90"
+            },
+            {
+              "label": "seed-91",
+              "href": "seed-92"
+            },
+            {
+              "label": "seed-93",
+              "href": "seed-94"
+            }
+          ]
+        },
+        "announcements": [
+          {
+            "title": "seed-50",
+            "body": "seed-51"
+          },
+          {
+            "title": "seed-52",
+            "body": "seed-53"
+          }
+        ],
+        "quickLinks": [
+          {
+            "label": "seed-54",
+            "desc": "seed-55",
+            "href": "seed-56",
+            "cta": "seed-57"
+          },
+          {
+            "label": "seed-58",
+            "desc": "seed-59",
+            "href": "seed-60",
+            "cta": "seed-61"
+          },
+          {
+            "label": "seed-62",
+            "desc": "seed-63",
+            "href": "seed-64",
+            "cta": "seed-65"
+          }
+        ],
+        "partyBoard": {
+          "title": "seed-66",
+          "items": [
+            {
+              "title": "seed-67",
+              "body": "seed-68",
+              "when": "seed-69"
+            },
+            {
+              "title": "seed-70",
+              "body": "seed-71",
+              "when": "seed-72"
+            },
+            {
+              "title": "seed-73",
+              "body": "seed-74",
+              "when": "seed-75"
+            }
+          ]
+        },
+        "announcementsBoard": {
+          "title": "seed-76",
+          "items": [
+            {
+              "title": "seed-77",
+              "body": "seed-78",
+              "when": "seed-79"
+            },
+            {
+              "title": "seed-80",
+              "body": "seed-81",
+              "when": "seed-82"
+            },
+            {
+              "title": "seed-83",
+              "body": "seed-84",
+              "when": "seed-85"
+            }
+          ]
+        },
+        "postWidget": {
+          "title": "seed-86",
+          "pinnedTitle": "seed-87",
+          "pinnedBody": "seed-88"
+        }
+      },
+      "perks": {
+        "hero": {
+          "title": "seed-95",
+          "subtitle": "seed-96",
+          "kickerBadges": [
+            "seed-97",
+            "seed-98",
+            "seed-99"
+          ],
+          "kickerButtons": [
+            {
+              "label": "seed-149",
+              "href": "seed-150"
+            },
+            {
+              "label": "seed-151",
+              "href": "seed-152"
+            },
+            {
+              "label": "seed-153",
+              "href": "seed-154"
+            }
+          ]
+        },
+        "topLinks": [
+          {
+            "label": "seed-100",
+            "desc": "seed-101",
+            "href": "seed-102",
+            "cta": "seed-103"
+          },
+          {
+            "label": "seed-104",
+            "desc": "seed-105",
+            "href": "seed-106",
+            "cta": "seed-107"
+          },
+          {
+            "label": "seed-108",
+            "desc": "seed-109",
+            "href": "seed-110",
+            "cta": "seed-111"
+          }
+        ],
+        "demoControls": {
+          "title": "seed-112",
+          "body": "seed-113"
+        },
+        "tierCards": [
+          {
+            "title": "seed-114",
+            "tierLabel": "seed-115",
+            "body": "seed-116",
+            "buttonLabel": "seed-117"
+          },
+          {
+            "title": "seed-118",
+            "tierLabel": "seed-119",
+            "body": "seed-120",
+            "buttonLabel": "seed-121"
+          },
+          {
+            "title": "seed-122",
+            "tierLabel": "seed-123",
+            "body": "seed-124",
+            "buttonLabel": "seed-125"
+          }
+        ],
+        "marketplace": {
+          "title": "seed-126"
+        },
+        "marketplaceItems": [
+          {
+            "title": "seed-127",
+            "body": "seed-128",
+            "costLabel": "seed-129"
+          },
+          {
+            "title": "seed-130",
+            "body": "seed-131",
+            "costLabel": "seed-132"
+          },
+          {
+            "title": "seed-133",
+            "body": "seed-134",
+            "costLabel": "seed-135"
+          }
+        ],
+        "campaigns": {
+          "title": "seed-136",
+          "items": [
+            {
+              "title": "seed-137",
+              "body": "seed-138",
+              "ctaLabel": "seed-139",
+              "href": "seed-140"
+            },
+            {
+              "title": "seed-141",
+              "body": "seed-142",
+              "ctaLabel": "seed-143",
+              "href": "seed-144"
+            },
+            {
+              "title": "seed-145",
+              "body": "seed-146",
+              "ctaLabel": "seed-147",
+              "href": "seed-148"
+            }
+          ]
+        }
+      },
+      "account": {
+        "hero": {
+          "title": "seed-163",
+          "subtitle": "seed-164",
+          "kickerBadges": [
+            "seed-165",
+            "seed-166",
+            "seed-167"
+          ],
+          "kickerButtons": [
+            {
+              "label": "seed-227",
+              "href": "seed-228"
+            },
+            {
+              "label": "seed-229",
+              "href": "seed-230"
+            },
+            {
+              "label": "seed-231",
+              "href": "seed-232"
+            }
+          ]
+        },
+        "actions": [
+          {
+            "label": "seed-168"
+          },
+          {
+            "label": "seed-169"
+          }
+        ],
+        "statusPanel": {
+          "title": "seed-170"
+        },
+        "rewards": {
+          "title": "seed-171",
+          "subtitle": "seed-172",
+          "rows": [
+            {
+              "label": "seed-173",
+              "value": "seed-174"
+            },
+            {
+              "label": "seed-175",
+              "value": "seed-176"
+            },
+            {
+              "label": "seed-177",
+              "value": "seed-178"
+            }
+          ]
+        },
+        "rewardsFeed": [
+          {
+            "title": "seed-179",
+            "body": "seed-180"
+          },
+          {
+            "title": "seed-181",
+            "body": "seed-182"
+          },
+          {
+            "title": "seed-183",
+            "body": "seed-184"
+          }
+        ],
+        "referralWidget": {
+          "title": "seed-185",
+          "subtitle": "seed-186",
+          "inputLabel": "seed-187",
+          "generateCta": "seed-188",
+          "buttons": [
+            {
+              "label": "seed-189"
+            },
+            {
+              "label": "seed-190"
+            }
+          ]
+        },
+        "quickActions": {
+          "title": "seed-191",
+          "items": [
+            {
+              "title": "seed-192",
+              "body": "seed-193",
+              "cta": "seed-194",
+              "href": "seed-195"
+            },
+            {
+              "title": "seed-196",
+              "body": "seed-197",
+              "cta": "seed-198",
+              "href": "seed-199"
+            },
+            {
+              "title": "seed-200",
+              "body": "seed-201",
+              "cta": "seed-202",
+              "href": "seed-203"
+            }
+          ]
+        },
+        "socialsPanel": {
+          "title": "seed-204",
+          "items": [
+            {
+              "title": "seed-205",
+              "body": "seed-206",
+              "cta": "seed-207",
+              "href": "seed-208"
+            },
+            {
+              "title": "seed-209",
+              "body": "seed-210",
+              "cta": "seed-211",
+              "href": "seed-212"
+            },
+            {
+              "title": "seed-213",
+              "body": "seed-214",
+              "cta": "seed-215",
+              "href": "seed-216"
+            }
+          ]
+        },
+        "notes": {
+          "title": "seed-217",
+          "items": [
+            {
+              "title": "seed-218",
+              "body": "seed-219",
+              "badge": "seed-220"
+            },
+            {
+              "title": "seed-221",
+              "body": "seed-222",
+              "badge": "seed-223"
+            },
+            {
+              "title": "seed-224",
+              "body": "seed-225",
+              "badge": "seed-226"
+            }
+          ]
+        }
+      }
+    },
+    "socials": {
+      "x": "seed-155",
+      "youtube": "seed-156",
+      "discord": "seed-157",
+      "engage": "seed-158",
+      "facebook": "seed-159",
+      "instagram": "seed-160",
+      "tiktok": "seed-161",
+      "telegram": "seed-162"
+    }
+  }
+}
